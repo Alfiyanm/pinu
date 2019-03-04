@@ -1,0 +1,18 @@
+<button class="btn btn-success logout" routerLink="/">Keluar</button>
+<br>
+<div class="row">
+  <div class="col-xs-10">
+    <app-data-edit
+      (participantAdded)="onParticipantAdded($event)"></app-data-edit>
+    <hr>
+    <ul class="list-group">
+      <a
+        class="list-group-item"
+        style="cursor: pointer"
+        *ngFor="let participant of participants"
+      >
+        Nilai {{ participant.namaPeserta }}, adalah {{ participant.nilaiUjian }}
+      </a>
+    </ul>
+  </div>
+</div>
